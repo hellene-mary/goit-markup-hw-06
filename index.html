@@ -316,6 +316,26 @@
                     <use href="./images/symbol-defs.svg#icon-close-btn"></use>
                 </svg>              
             </button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+            <label class="modal-label" for="user-name">Имя</label>
+            <input class="modal-input" type="text" id="user-name">
+
+            <label class="modal-label" for="user-tel">Телефон</label>
+            <input class="modal-input" type="tel" id="user-tel">
+
+            <label class="modal-label" for="user-email">Почта</label>
+            <input class="modal-input" type="email" id="user-email">
+
+            <label class="modal-label" for="user-comment">Комментарий</label>
+            <textarea class="user-comment" name="user-comment" id="user-comment" placeholder="Введите текст"></textarea>
+            
+            <div class="accept-box">
+                <input class="input-accept" type="checkbox" id="accept" name="accept">
+                <label class="label-accept" for="accept">Соглашаюсь с рассылкой и принимаю <a href="" class="accept-link"> Условия договора</a></label>
+            </div>
+            
+            <button class="btn-submit" type="submit">Отправить</button>
         </div>
     </div>
     <script src="./js/modal.js"></script>
