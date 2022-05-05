@@ -792,7 +792,8 @@ img {
     color: var(--second-text-color);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+
 }
 
 .label-accept::before{
@@ -801,6 +802,7 @@ img {
     height: 15px;
     border: 2px solid #000000;
     border-radius: 3px;
+    margin-right: 8px;
 
 }
 
