@@ -596,10 +596,12 @@ img {
     fill: var(--text-color-light);
 }
 
-
+.subscribe-box{
+    display: flex;
+}
 
 .subscribe-input{
-    background-color: var(--dark-bgc);
+    background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -608,12 +610,12 @@ img {
     width: 358px;
     padding: 15px 16px;
     color: #FFFFFF;
+    outline: none;
 }
 
-.subscribe-box{
-    display: flex;
+.subscribe-input:focus{
+    border-color: var(--color-accent);
 }
-
 
 .subscribe-btn{
     margin-left: 12px;
@@ -711,6 +713,10 @@ img {
     margin-bottom: 12px;
 }
 
+.modal-field{
+    margin-bottom: 10px;
+}
+
 .modal-label{
     font-weight: 400;
     font-size: 12px;
@@ -725,17 +731,32 @@ img {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     width: 100%;
-    margin-bottom: 10px;
-    height: 40px;
-    padding-left: 12px;
-    cursor: pointer;
 
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    height: 40px;
+    padding-left: 42px;
+    cursor: pointer;
+    outline: none;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:hover, .modal-input:focus,
-.user-comment:hover, .user-comment:focus{
-    border: 1px solid var(--color-accent);
+.modal-input:hover, .modal-input:focus{
+    border-color: var(--color-accent);
+}
+
+.modal-input:hover + .input-icon, .modal-input:focus + .input-icon{
+    fill: var(--color-accent);
+}
+
+.modal-input-wrap{
+    position: relative;
+}
+
+.input-icon{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .user-comment{
@@ -752,8 +773,14 @@ img {
     color: rgba(117, 117, 117, 0.5);
     height: 120px;
     padding: 12px 16px;
+    outline: none;
 
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.user-comment:hover, .user-comment:focus{
+    border-color: var(--color-accent);
 }
 
 .label-accept{
@@ -762,10 +789,30 @@ img {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
+    display: flex;
+    align-items: center;
+}
+
+.label-accept::before{
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    margin-right: 9px;
 
 }
 
-.input-accept{
+.input-accept:checked + .label-accept::before{
+    background-color: var(--color-accent);
+    border: none;
+    background-image: url(../images/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input-accept:focus + .label-accept::before{
+    border-color: var(--color-accent);
 }
 
 .accept-link{

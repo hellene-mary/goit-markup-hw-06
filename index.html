@@ -327,22 +327,41 @@
                 </svg>              
             </button>
             <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-
-            <label class="modal-label" for="user-name">Имя</label>
-            <input class="modal-input" type="text" id="user-name">
-
-            <label class="modal-label" for="user-tel">Телефон</label>
-            <input class="modal-input" type="tel" id="user-tel">
-
-            <label class="modal-label" for="user-email">Почта</label>
-            <input class="modal-input" type="email" id="user-email">
-
-            <label class="modal-label" for="user-comment">Комментарий</label>
-            <textarea class="user-comment" name="user-comment" id="user-comment" placeholder="Введите текст"></textarea>
+            <div class="modal-field">
+                <label class="modal-label" for="user-name">Имя</label>
+                <div class="modal-input-wrap">
+                    <input class="modal-input" type="text" id="user-name">
+                    <svg class="input-icon" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-person"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-field">
+                <label class="modal-label" for="user-tel">Телефон</label>
+                <div class="modal-input-wrap">
+                    <input class="modal-input" type="tel" id="user-tel">
+                    <svg class="input-icon" width="18" height="18">
+                        <use href="/images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-field">
+                <label class="modal-label" for="user-email">Почта</label>
+                <div class="modal-input-wrap">
+                    <input class="modal-input" type="email" id="user-email">
+                    <svg class="input-icon" width="18" height="18">
+                        <use href="/images/symbol-defs.svg#icon-email"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-field">
+                <label class="modal-label" for="user-comment">Комментарий</label>
+                <textarea class="user-comment" name="user-comment" id="user-comment" placeholder="Введите текст"></textarea>
+            </div>
             
             <div class="accept-box">
-                <input class="input-accept" type="checkbox" id="accept" name="accept">
-                <label class="label-accept" for="accept">Соглашаюсь с рассылкой и принимаю <a href="" class="accept-link"> Условия договора</a></label>
+                <input class="input-accept visually-hidden" type="checkbox" id="accept" name="accept" value="accept">
+                <label class="label-accept" for="accept">Соглашаюсь с рассылкой и принимаю&#xa0;<a href="" class="accept-link"> Условия договора</a></label>
             </div>
             
             <button class="btn-submit" type="submit">Отправить</button>
