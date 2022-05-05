@@ -757,6 +757,7 @@ img {
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+    fill: #212121;
 }
 
 .user-comment{
@@ -764,7 +765,7 @@ img {
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-bottom: 20px;
+
 
     font-weight: 400;
     font-size: 14px;
@@ -791,6 +792,7 @@ img {
     color: var(--second-text-color);
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .label-accept::before{
@@ -799,7 +801,6 @@ img {
     height: 15px;
     border: 2px solid #000000;
     border-radius: 3px;
-    margin-right: 9px;
 
 }
 
@@ -820,7 +821,7 @@ img {
 }
 
 .accept-box{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
